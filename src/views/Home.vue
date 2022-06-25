@@ -1,16 +1,11 @@
 <template>
   <main>
-    <div>
-      <img :src="logoIcon" alt="">
-    </div>
-      <div>
-          <img src="../assets/cat-house.jpg" alt="">
-    </div>
+
     <div v-for="product in sortedProducts" :key="product">
       <div class="row">
         <div class="col-md-5 col-md-offset-0">
           <figure>
-            <img class="product" :src="product.image"> 
+            <img class="product" :src="product.image" > 
           </figure>
         </div>
         <div class="col-md-6 col-md-offset-0 description">
@@ -46,11 +41,9 @@
 </main>
 </template>
 <script>
-import logoIcon from "../assets/logo.png";
 export default {
   data() {
     return {
-      logoIcon,
       products: {},
       cart: []
     };
