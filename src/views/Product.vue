@@ -1,6 +1,5 @@
-<!-- <template>
+<template>
   <div>
-    <my-header></my-header>
     <h1> This is the id {{ $route.params.id}}</h1>	
     <div class="row">
       <div class="col-md-5 col-md-offset-0">
@@ -37,4 +36,4 @@ export default {
 
 <style>
 
-</style> -->
+</style>
