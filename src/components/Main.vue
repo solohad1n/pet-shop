@@ -109,11 +109,9 @@ export default {
     }
   },
   mounted: function () {
-    axios.get('http://localhost:3000/products').then(response => this.products = response.data).catch(error => {
-      console.log(error + 'массив не пришёл')
-    })
-  },
-};
+    axios.get('http://localhost:3000/products').then(response => this.products = response.data)
+    }
+  }
 </script>
 
 <style>
