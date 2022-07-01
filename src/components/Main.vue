@@ -65,11 +65,11 @@
   </div>
 </template>
 <script>
+import { mapGetters } from "vuex";
 import Header from "./Header.vue";
 export default {
   data() {
     return {
-      products: {},
       cart: [],
     };
   },
@@ -108,6 +108,7 @@ export default {
         return productsArray.sort(compare);
       }
     },
+    ...mapGetters(["products"]),
   },
   filters: {
     formatPrice(price) {
@@ -128,11 +129,10 @@ export default {
       }
     },
   },
-  mounted: function () {
-    axios
-      .get("http://localhost:3000/products")
-      .then((response) => (this.products = response.data));
+  mounted() {
+    this.$store.dispatch("initStore");
   },
+
   components: { Header },
 };
 </script>
